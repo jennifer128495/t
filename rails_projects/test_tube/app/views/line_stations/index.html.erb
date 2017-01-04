@@ -1,0 +1,33 @@
+<h1>Listing line_stations</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Line</th>
+      <th>Integer</th>
+      <th>Station</th>
+      <th>Integer</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @line_stations.each do |line_station| %>
+      <tr>
+        <td><%= line_station.line_id %></td>
+        <td><%= line_station.integer %></td>
+        <td><%= line_station.station_id %></td>
+        <td><%= line_station.integer %></td>
+        <td><%= link_to 'Show', line_station %></td>
+        <td><%= link_to 'Edit', edit_line_station_path(line_station) %></td>
+        <td><%= link_to 'Destroy', line_station, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Line station', new_line_station_path %>

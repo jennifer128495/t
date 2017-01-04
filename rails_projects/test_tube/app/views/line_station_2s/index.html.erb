@@ -1,0 +1,29 @@
+<h1>Listing line_station_2s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Line</th>
+      <th>Station</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @line_station_2s.each do |line_station_2| %>
+      <tr>
+        <td><%= line_station_2.line_id %></td>
+        <td><%= line_station_2.station_id %></td>
+        <td><%= link_to 'Show', line_station_2 %></td>
+        <td><%= link_to 'Edit', edit_line_station_2_path(line_station_2) %></td>
+        <td><%= link_to 'Destroy', line_station_2, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Line station 2', new_line_station_2_path %>
